@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Đang chuyển hướng...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const maThuoc = params.get("maThuoc");
+    if (maThuoc) {
+      const url = "https://script.google.com/macros/s/AKfycbx98C_U8vdxM8MV7jEf2JBCQ_wqglWe1g-rkeu5jNi9vLNuFbG9tt-oRTKru357NMLL6g/exec?maThuoc=" + encodeURIComponent(maThuoc);
+      window.location.href = url;
+    } else {
+      document.write("Thiếu tham số 'maThuoc'");
+    }
+  </script>
+</head>
+<body>
+  <p>Đang chuyển hướng, vui lòng chờ...</p>
+</body>
+</html>
